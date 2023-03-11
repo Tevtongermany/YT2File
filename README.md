@@ -5,4 +5,4 @@ yeah, that's pretty much it
 I made it because one of the sites that I download videos from got taken down
 
 
-everything was made for educational reasons
+everything was made for educational reasons :3
