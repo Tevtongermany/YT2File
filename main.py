@@ -4,6 +4,7 @@ import customtkinter
 from pytube import YouTube
 import pytube
 import os
+import configparser
 import threading
 import time
 
@@ -14,6 +15,21 @@ customtkinter.set_default_color_theme("blue")
 
 # I aint documenting everything so
 # be careful
+Resolution = 720
+folderpath = ""
+settingsfilename = "settings.ini"
+
+if os.path.exists(settingsfilename):
+    config = configparser.ConfigParser()
+    config.read(settingsfilename)
+    filepath = config.get('Settings', 'File Path')
+    Resolution = config.get('Settings', 'Resolution')
+else:
+    config = configparser.ConfigParser()
+    config['Settings'] = {'File Path': '', 'Resolution': '720'}
+    with open(settingsfilename, 'w') as f:
+        config.write(f)
+
 
 class HelpWindow(customtkinter.CTkToplevel):
     def __init__(self, *args, **kwargs):
@@ -35,12 +51,11 @@ class App(customtkinter.CTk):
         super().__init__(*args, **kwargs)
         # Window Settings
         self.geometry("450x400")
-        self.title("yt2file 2.0")
+        self.title("yt2file 2.1")
         self.iconbitmap("Yt2file.ico") 
         self.resizable(False, False)
 
-        folderpath = "files/"
-        Resolution = 720
+        
         link = ""
 
         def download():
@@ -92,6 +107,10 @@ class App(customtkinter.CTk):
                 dialog = customtkinter.CTkInputDialog(text="Dont include the p at the end\n Sidenote this does not affect audio", title="Resolution Configurator")
                 Resolution = int(dialog.get_input())
                 self.res.configure(text=f"Resolution: {str(Resolution)}p")
+                config = configparser.ConfigParser()
+                config['Settings'] = {'File Path': f'{filepath}','Resolution': f'{str(Resolution)}'}
+                with open(settingsfilename, 'w') as f:
+                    config.write(f)
             except:
                 pass
 
