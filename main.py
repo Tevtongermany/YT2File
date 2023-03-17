@@ -7,6 +7,7 @@ import os
 import configparser
 import threading
 import time
+import datetime
 
 
 
@@ -51,7 +52,7 @@ class App(customtkinter.CTk):
         super().__init__(*args, **kwargs)
         # Window Settings
         self.geometry("450x400")
-        self.title("yt2file 2.1")
+        self.title("yt2file 2.2")
         self.iconbitmap("Yt2file.ico") 
         self.resizable(False, False)
 
@@ -72,9 +73,9 @@ class App(customtkinter.CTk):
                 else:
                     url = self.linktofile.get()
                     yt = YouTube(url=url)
-                    title = yt.streams.first().default_filename
                     yt.register_on_progress_callback(func=progress)
                     yt.register_on_complete_callback(func=downloaddone)
+                    title = yt.streams.first().default_filename
                     self.status.configure(text="Status: Downloading!")
                     yt.streams.filter(only_audio=True).first().download(output_path=folderpath,filename=f"{title}.mp3")
             except:
