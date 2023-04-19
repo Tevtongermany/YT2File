@@ -24,7 +24,7 @@ then you press the ok button after that a window should appear like this one
 
 ![run](https://github.com/Tevtongermany/YT2FILE/blob/main/systemvar1.PNG)
 
-then you double click on "Path" 
+then you double click on "Path" on the first window
 
 ![run](https://github.com/Tevtongermany/YT2FILE/blob/main/systemvar2.PNG)
 
