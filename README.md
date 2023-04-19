@@ -10,3 +10,8 @@ everything was made for educational reasons :3
 [![discord](https://img.shields.io/badge/Click%20Me!-Collector?color=7289DA&label=Collector%20Studio&logo=discord&logoColor=7289DA&style=for-the-badge)](https://discord.gg/WeUSduZraK)
 # Known bugs
 - None
+
+# plans for the future 
+- switching to another language since python create big files and i don't really like it
+- thinking about how to intergrate ffmpeg without a installer or any download what so ever 
+- rethink the ui
