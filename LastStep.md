@@ -31,6 +31,6 @@ then you double click on "Path" on the first window
 after that you press on New then a small textbox should appear 
 in that textbox you are going to type in C:\ffmpeg\bin
 
-and now you are done!
+and now you are done! don't forget to restart yt2file
 
 
