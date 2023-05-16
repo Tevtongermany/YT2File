@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "T3E9Ln7d30fo9qg+DhUJM+SvBJ0bDI2j2oL9tVvAUpB2uDZwHYDW8ATmiGe1O4GLpzqhnuyL1aq3zugQ9hxdUw==",
+  "success": true,
+  "projectFilePath": "D:\\Code Projects\\C#\\YT2FILE\\C# Version\\YT2File\\YT2File\\YT2File.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\evgen\\.nuget\\packages\\adonisui\\1.17.1\\adonisui.1.17.1.nupkg.sha512",
+    "C:\\Users\\evgen\\.nuget\\packages\\adonisui.classictheme\\1.17.1\\adonisui.classictheme.1.17.1.nupkg.sha512",
+    "C:\\Users\\evgen\\.nuget\\packages\\microsoft.netcore.platforms\\3.0.0\\microsoft.netcore.platforms.3.0.0.nupkg.sha512",
+    "C:\\Users\\evgen\\.nuget\\packages\\microsoft.win32.systemevents\\4.6.0\\microsoft.win32.systemevents.4.6.0.nupkg.sha512",
+    "C:\\Users\\evgen\\.nuget\\packages\\system.drawing.common\\4.6.0\\system.drawing.common.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
