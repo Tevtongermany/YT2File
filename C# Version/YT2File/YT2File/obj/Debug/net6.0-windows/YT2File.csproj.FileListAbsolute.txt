@@ -23,3 +23,6 @@ D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\obj\Debug\net6.0-windows\
 D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\obj\Debug\net6.0-windows\YT2File.pdb
 D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\obj\Debug\net6.0-windows\YT2File.genruntimeconfig.cache
 D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\obj\Debug\net6.0-windows\ref\YT2File.dll
+D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\bin\Debug\net6.0-windows\CommunityToolkit.Mvvm.dll
+D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
