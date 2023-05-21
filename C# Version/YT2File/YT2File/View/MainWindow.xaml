@@ -34,7 +34,7 @@
             <MenuItem Header="Socials">
                 <MenuItem Header="Github">
                     <MenuItem.Icon>
-                        <Image/>
+                        <Image Source="/Assets/logo/github-mark.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
@@ -60,12 +60,9 @@
             <GroupBox Grid.Row="1" Header="Video Info" Margin="10,0,0,0">
                 <Grid>
                     <StackPanel>
-                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
-                        
-                            <Image Width="300" Height="150" Stretch="Fill" Source="/Assets/Images/Adonis.png" />
-                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top"/>
                         <StackPanel>
-                            <TextBlock><Run Text="Title:"/></TextBlock>
+                            <TextBlock><Run Text="{Binding Path=VideoTitle, Mode=TwoWay}" FontSize="24"/></TextBlock>
                             <TextBlock><Run Text="Size:"/></TextBlock>
                             <TextBlock><Run Text="Lenght:"/></TextBlock>
                         </StackPanel>

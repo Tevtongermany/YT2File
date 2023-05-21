@@ -7,6 +7,7 @@ using System.Windows.Data;
 using System;
 using YT2File.View.Extensions;
 using System.Linq;
+using System.Windows;
 
 namespace YT2File.View;
 
@@ -42,5 +43,5 @@ public partial class MainWindow
             return values.FirstOrDefault(x => x.GetDescription().Equals(value)) ?? value;
         }
     }
-    
+
 }

@@ -13,6 +13,7 @@ namespace YT2File.ViewModels;
 public class ApplicationViewModel : ObservableObject
 {
     public MainWindowViewModel MainVM;
+    public SplashScreenViewModel SplashScreenVM;
 
     public void Warning(string caption, string message)
     {

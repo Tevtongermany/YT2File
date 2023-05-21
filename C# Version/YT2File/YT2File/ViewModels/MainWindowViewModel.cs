@@ -13,6 +13,7 @@ using YT2File.Helper;
 using System.Threading;
 using System.Net.Http;
 using Serilog;
+using System.Diagnostics;
 
 namespace YT2File.ViewModels;
 
@@ -28,8 +29,6 @@ public partial class MainWindowViewModel : ObservableObject
         TestCommand = new RelayCommand(test);
         StartDownloadCommand = new RelayCommand(Download);
         
-        // Creates logger
-        initialize();
     }
     // Variables
     public string lastURL { get; set; } = string.Empty;
@@ -62,31 +61,49 @@ public partial class MainWindowViewModel : ObservableObject
         switch (Format)
         {
             case 0:
-                Console.WriteLine("Video Download Thread started ");
+                try
+                {
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    startInfo.FileName = "Deps/yt-dlp.exe";
+                    startInfo.Arguments = $"-f mp4 --ffmpeg-location Deps/ffmpeg/bin {lastURL}";
+                    startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+                    using (Process process = new Process())
+                    {
+                        process.StartInfo = startInfo;
+                        process.Start();
+                        process.WaitForExit();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
                 break;
             case (EFormat)1:
-                Console.WriteLine("Thread Stgarted");
+                try
+                {
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    startInfo.FileName = "Deps/yt-dlp.exe";
+                    startInfo.Arguments = $"--extract-audio --audio-format mp3 --ffmpeg-location Deps/ffmpeg/bin {lastURL}";
+                    startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+                    using (Process process = new Process())
+                    {
+                        process.StartInfo = startInfo;
+                        process.Start();
+                        process.WaitForExit();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
                 break;
         }
 
-    }
-    public void initialize()
-    {
-
-        Console.WriteLine("Checking if YT DLP Exists");
-        if (File.Exists("yt-dlp.exe"))
-        {
-            Console.WriteLine("youtube_dlp exists Checking if FFmpeg is Installed");
-
-            if (File.Exists("ffmpeg/bin"))
-            {
-                Console.WriteLine("FFmpeg is Installed done Checking");
-            }
-        }
-        else
-        {
-            Console.WriteLine("youtube_dlp Doesn't Exist ");
-        }
     }
 
 }

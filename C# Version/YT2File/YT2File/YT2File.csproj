@@ -7,6 +7,11 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Assets\Images\Adonis.png" />
+    <None Remove="Assets\logo\github-mark.png" />
+  </ItemGroup>
+
 
 
 
@@ -17,11 +22,11 @@
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Serilog" Version="2.12.0" />
-    <PackageReference Include="VideoLibrary" Version="3.2.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="View\github-mark.png" />
+    <Resource Include="Assets\Images\Adonis.png" />
+    <Resource Include="Assets\logo\github-mark.png" />
     <Resource Include="Assets\logo\Yt2file.ico" />
   </ItemGroup>
 

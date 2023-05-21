@@ -10,8 +10,10 @@
         WindowStyle="None"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="SplashScreen" Height="200" Width="200">
+        Title="SplashScreen" Height="200" Width="200" Loaded="OnLoaded" ResizeMode="NoResize">
     <Grid>
-        <Image Height="100" Width="100" Source="/Assets/logo/Yt2file.ico"/>
+        <Image Height="100" Width="100" Source="/Assets/logo/Yt2file.ico" Stretch="Fill" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,145,0,0" TextWrapping="Wrap" Text="YT2FIle" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,161,0,0" TextWrapping="Wrap" Text="{Binding Path=Title, Mode=TwoWay}" VerticalAlignment="Top" TextAlignment="Center"/>
     </Grid>
 </adonisCtrls:AdonisWindow>
