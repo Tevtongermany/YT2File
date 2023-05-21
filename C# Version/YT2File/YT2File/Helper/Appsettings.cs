@@ -31,7 +31,8 @@ public partial class AppSettings : ObservableObject
         File.WriteAllText(FilePath.FullName, JsonConvert.SerializeObject(Current, Newtonsoft.Json.Formatting.Indented));
     }
 
-    [ObservableProperty] private EFormat format = EFormat.audio;
+    [ObservableProperty] private EFormat format = EFormat.video;
+    [ObservableProperty] private string downloadpath = "";
 
    
 }

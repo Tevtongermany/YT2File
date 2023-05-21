@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Runtime.InteropServices;
+using YT2File.Services;
 using YT2File.Helper;
+using YT2File.ViewModels;
+using System.Globalization;
+using System.Windows.Data;
+using System;
+using YT2File.View.Extensions;
+using System.Linq;
 
 namespace YT2File.View;
 
@@ -30,6 +23,24 @@ public partial class MainWindow
         AllocConsole();
         AppSettings.DirectoryPath.Create();
         AppSettings.Load();
-    }
+        AppVM.MainVM = new MainWindowViewModel();
+        DataContext = AppVM.MainVM;
 
+    }
+    //  Enum to String
+    public class EnumToStringConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var enumValue = (Enum)value;
+            return enumValue.GetDescription();
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var values = Enum.GetValues(targetType).Cast<Enum>();
+            return values.FirstOrDefault(x => x.GetDescription().Equals(value)) ?? value;
+        }
+    }
+    
 }

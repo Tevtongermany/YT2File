@@ -26,3 +26,7 @@ D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\obj\Debug\net6.0-windows\
 D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\bin\Debug\net6.0-windows\CommunityToolkit.Mvvm.dll
 D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\bin\Debug\net6.0-windows\libvideo.dll
+D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\bin\Debug\net6.0-windows\Serilog.dll
+D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\obj\Debug\net6.0-windows\View\SplashScreen.g.cs
+D:\Code Projects\C#\YT2FILE\C# Version\YT2File\YT2File\obj\Debug\net6.0-windows\View\SplashScreen.baml
