@@ -81,7 +81,7 @@
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <ComboBox ItemsSource="{extensions:EnumToItemsSource {x:Type Enums:EFormat}}"  SelectedItem="{Binding Format, Converter={StaticResource EnumToString}}">
                     </ComboBox>
-                    <Button Width="100" Command="{Binding StartDownloadCommand}" Content="Download"/>
+                    <Button Width="100" Command="{Binding DownloadCommand}" Content="Download"/>
                 </StackPanel>
             </GroupBox>
 
