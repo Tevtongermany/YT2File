@@ -15,3 +15,10 @@ I made it because one of the sites that I download videos from was taken down
 - Switch to another language since python embeds its runtime into the binarys
 - Intergrate ffmpeg without an installer or any download at all 
 - Remake the UI
+# Install guide
+using a venv is recommended     
+
+install line to install all deps
+```
+pip install customtkinter yt-dlp
+```

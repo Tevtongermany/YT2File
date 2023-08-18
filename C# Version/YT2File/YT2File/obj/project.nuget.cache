@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RZ5c9+/fxDbgi+4nQbTVdvKJigoDlIStrGLXT4StnLlA40k6oD/gr9yX+RKnE/ANisGcG9TiEFhoyzvGdm36CQ==",
+  "dgSpecHash": "S0HWVvchS7O7Czw9wUx7v4XSzpyDOggiPfNSAmb54BoPJj2bOz0cR18+UFi+FC3l/MgRB7Cls4Yriy7arRNqAA==",
   "success": true,
   "projectFilePath": "D:\\Code Projects\\C#\\YT2FILE\\C# Version\\YT2File\\YT2File\\YT2File.csproj",
   "expectedPackageFiles": [
@@ -10,8 +10,13 @@
     "C:\\Users\\evgen\\.nuget\\packages\\microsoft.netcore.platforms\\3.0.0\\microsoft.netcore.platforms.3.0.0.nupkg.sha512",
     "C:\\Users\\evgen\\.nuget\\packages\\microsoft.win32.systemevents\\4.6.0\\microsoft.win32.systemevents.4.6.0.nupkg.sha512",
     "C:\\Users\\evgen\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\evgen\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
+    "C:\\Users\\evgen\\.nuget\\packages\\restsharp.serializers.newtonsoftjson\\110.2.0\\restsharp.serializers.newtonsoftjson.110.2.0.nupkg.sha512",
     "C:\\Users\\evgen\\.nuget\\packages\\serilog\\2.12.0\\serilog.2.12.0.nupkg.sha512",
-    "C:\\Users\\evgen\\.nuget\\packages\\system.drawing.common\\4.6.0\\system.drawing.common.4.6.0.nupkg.sha512"
+    "C:\\Users\\evgen\\.nuget\\packages\\system.drawing.common\\4.6.0\\system.drawing.common.4.6.0.nupkg.sha512",
+    "C:\\Users\\evgen\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\evgen\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\evgen\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }

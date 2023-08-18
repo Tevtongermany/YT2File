@@ -36,6 +36,3 @@ public partial class AppSettings : ObservableObject
 
    
 }
-// Shout out to half check him out here since everything in this file was made by him and not me
-// i hope it isn't bad that im using his code
-// https://github.com/halfuwu/

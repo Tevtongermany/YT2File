@@ -38,19 +38,16 @@ public partial class SplashScreenViewModel : ObservableObject
     public async Task check()
     {
         
-        await Task.Delay(5000);
         if (Directory.Exists("Deps"))
         {
             Title = "Directory Exists!";
         }
         else
         {
-            await Task.Delay(1000);
             Title = "Directory Doesn't Exists. Making one";
             Directory.CreateDirectory("Deps");
 
         }
-        await Task.Delay(1000);
         Title = "Checking If YT-DLP is Installed";
         if (File.Exists("Deps/yt-dlp.exe"))
         {

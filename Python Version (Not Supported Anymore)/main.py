@@ -1,17 +1,9 @@
-import ctypes
-import string
-import subprocess
-import sys
-import time
 import tkinter
 import customtkinter
 import requests
 import yt_dlp
 import os
-import configparser
 import threading
-import shutil
-import webbrowser
 import zipfile
 
 customtkinter.set_appearance_mode("dark")
@@ -30,7 +22,7 @@ class Logger:
         pass
 
     def error(self, msg):
-        print(msg)
+        pass
 
 # I aint documenting everything so
 # be careful
@@ -41,7 +33,7 @@ class App(customtkinter.CTk):
         # Window Settings
         self.geometry("450x400")
         self.title("yt2file 2.4")
-        self.iconbitmap("Yt2file.ico")
+        self.iconbitmap("favicon.ico")
         self.resizable(False, False)
 
         def download():
@@ -49,28 +41,35 @@ class App(customtkinter.CTk):
                 if self.File.get() == "mp4":
                     url = self.linktofile.get()
                     with yt_dlp.YoutubeDL(ydl_opts_mp4) as ydl:
+                        self.status.configure(text="Status: Downloading!")
                         ydl.download(url)
-                    self.status.configure(text="Status: Downloading!")
+
                 elif self.File.get() == "mp3":
                     url = self.linktofile.get()
                     with yt_dlp.YoutubeDL(ydl_opts_mp3) as ydl:
+                        self.status.configure(text="Status: Downloading!")
                         ydl.download(url)
-                    self.status.configure(text="Status: Downloading!")
-            except:
+                    
+            except Exception as e:
+                print(e)
                 self.status.configure(text="Status: Something Went Wrong >:/")
 
         def progress(d):
             downloadper = d['_percent_str']
-            calculated_downloadedper = float(downloadper.replace("%",""))/100
+            print(d['status'])
+            hs = downloadper.replace("\x1b[0;94m","")
+            finaloutput = hs.replace("\x1b[0m","")
+            calculated_downloadedper = float(finaloutput.replace("%",""))/100
             self.progressbar.set(value=calculated_downloadedper)
-            if calculated_downloadedper == 1:  # Do NOT ask a single question about this
-                self.status.configure(text="Status: Done :3")
+            if d['status'] == "finished":
+                self.status.configure(text="Status: Done")
 
         ydl_opts_mp4 = {
         'logger': Logger(),
         'progress_hooks': [progress],
         "format":"mp4",
-        'ffmpeg_location': 'ffmpeg/bin'
+        'ffmpeg_location': 'ffmpeg/bin',
+        'outtmpl':f"video/%(title)s.%(ext)s"
         }
         
         ydl_opts_mp3 = {
@@ -82,8 +81,9 @@ class App(customtkinter.CTk):
                 'key': 'FFmpegExtractAudio',
                 'preferredcodec': 'mp3',
                 'preferredquality': '192',    
-            }]
-        
+            }],
+        'outtmpl':f"video/%(title)s.%(ext)s"
+
         }
 
         self.status = customtkinter.CTkLabel(master=self,text="Status: Idle")
@@ -109,6 +109,13 @@ class App(customtkinter.CTk):
 
         self.progressbar.set(value=0)
         # If FFmpeg doesn't exist shouldn't happen but if it happens this downloads it
+
+        def make_video_folder():
+            if os.path.exists("video"):
+                pass
+            else:
+                os.mkdir("video")
+
         def downloadffmpeg():
             r =requests.get(url="https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip")
             open("ffmpeg.zip","wb").write(r.content)
@@ -119,11 +126,16 @@ class App(customtkinter.CTk):
             with zipfile.ZipFile("ffmpeg.zip", 'r') as zip_ref:
                 zip_ref.extractall("")
                 os.rename("ffmpeg-master-latest-win64-gpl","ffmpeg")
+            os.remove("ffmpeg.zip")
 
         if os.path.exists("ffmpeg"):
             pass
         else:
             downloadffmpeg()
+
+        make_video_folder()
+
+
 
 if __name__ == "__main__":
     app = App()

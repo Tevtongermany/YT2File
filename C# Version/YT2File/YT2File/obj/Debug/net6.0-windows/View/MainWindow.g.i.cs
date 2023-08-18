@@ -61,7 +61,7 @@ namespace YT2File.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/YT2File;component/view/mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/YT2File;V1.0.0.0;component/view/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
