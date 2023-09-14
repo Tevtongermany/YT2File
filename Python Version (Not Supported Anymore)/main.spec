@@ -8,7 +8,7 @@ a = Analysis(
     ['D:\\Code Projects\\C#\\YT2FILE\\Python Version (Not Supported Anymore)\\main.py'],
     pathex=[],
     binaries=[],
-    datas=[('\\Lib\\site-packages\\customtkinter', 'customtkinter')],
+    datas=[('D:\\Code Projects\\C#\\YT2FILE\\Python Version (Not Supported Anymore)\\venv\\Lib\\site-packages\\customtkinter', 'customtkinter')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

@@ -32,7 +32,7 @@ class App(customtkinter.CTk):
         super().__init__(*args, **kwargs)
         # Window Settings
         self.geometry("450x400")
-        self.title("yt2file 2.4")
+        self.title("yt2file 2.4.1")
         self.iconbitmap("favicon.ico")
         self.resizable(False, False)
 
